@@ -1,0 +1,439 @@
+/* ========================================
+   ESTILOS GERAIS
+======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #33a3f3 0%, #4ba2a0 100%);
+  min-height: 100vh;
+}
+
+/* O Segredo da Centralização */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  min-height: 100vh;      /* Ocupa toda a altura da tela */
+  width: 100vw;           /* Ocupa toda a largura da tela */
+  padding: 20px;
+}
+
+/* ========================================
+   TELA HOME
+======================================== */
+.bank-logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo-icon {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.slogan {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 50px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.action-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.action-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.action-card.highlight {
+  background: linear-gradient(135deg, #ffffff 0%);
+  color: white;
+}
+
+.card-icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.fingerprint-custom,
+.rocketprint-custom {
+  width: 80px;
+  height: 80px;
+}
+
+.action-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.action-card.highlight h3,
+.action-card.highlight p {
+  color: rgb(0, 0, 0);
+}
+
+
+.action-card p {
+  font-size: 14px;
+  color: #000000;
+}
+
+/* ========================================
+   FORMULÁRIOS (LOGIN E CADASTRO)
+======================================== */
+.form-box {
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.back-btn {
+  background: transparent;
+  border: none;
+  color: #0281b7;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 10px;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  transform: translateX(-5px);
+}
+
+.form-box h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.form-box input:focus {
+  outline: none;
+  border-color: #40E0D0;
+  box-shadow: 0 0 0 3px rgba(64, 224, 208, 0.1);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.row input:first-child {
+  grid-column: 1;
+}
+
+.row input:last-child {
+  grid-column: 2;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #40E0D0 0%, #89b2e1 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(64, 224, 208, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   DASHBOARD
+======================================== */
+.dashboard-container {
+  background: rgb(146, 209, 238);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #9d086642;
+}
+
+.dashboard-header h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.logout-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background: #ff3838;
+  transform: scale(1.05);
+}
+
+/* Card de Saldo */
+.saldo-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 30px;
+  color: white;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.saldo-label {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.saldo-valor {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.limite-info {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Seções */
+.secao {
+  margin-bottom: 30px;
+}
+
+.secao h3 {
+  color: #000000;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.secao h4 {
+  color: #000000;
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  font-weight: 600;
+}
+
+/* Transferência */
+.secao form {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 4px solid #40E0D0;
+  margin-bottom: 15px;
+}
+
+.secao form input {
+  margin-bottom: 15px;
+}
+
+.secao form h4 {
+  margin-bottom: 20px;
+}
+
+/* Empréstimos */
+.emprestimo-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-left: 4px solid #40E0D0;
+}
+
+.emp-info p {
+  margin-bottom: 8px;
+  color: #000000;
+  font-size: 14px;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status.ativo {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.quitado {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status.atrasado {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Transações */
+.transacoes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transacao-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.transacao-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.transacao-item.debito {
+  border-left: 4px solid #ff4757;
+}
+
+.transacao-item.credito {
+  border-left: 4px solid #2ed573;
+}
+
+.trans-tipo {
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.trans-descricao {
+  font-size: 12px;
+  color: #000000;
+}
+
+.trans-valor {
+  text-align: right;
+}
+
+.trans-valor p {
+  margin-bottom: 5px;
+}
+
+.negativo {
+  color: #ff4757;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.positivo {
+  color: #2ed573;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.trans-data {
+  font-size: 12px;
+  color: #000000;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+@media (max-width: 768px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .saldo-valor {
+    font-size: 36px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .row input:first-child,
+  .row input:last-child {
+    grid-column: 1;
+  }
+
+  .secao form {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,51 @@
+# BACK
+backend/backend.env
+backend/bankend.env
+
+# VENV
+venv_banco_dubom/
+
+# FRONT ================= frontend/
+
+# Python
+frontend/__pycache__/
+frontend/*.py[cod]
+frontend/*$py.class
+frontend/*.so
+frontend/.Python
+frontend/venv/
+frontend/env/
+frontend/ENV/
+frontend/*.egg-info/
+frontend/dist/
+frontend/build/
+
+# Node
+frontend/node_modules/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/dist/
+frontend/.vite/
+
+# Ambiente
+frontend/.env
+frontend/*.env
+
+# IDE
+frontend/.vscode/
+frontend/.idea/
+frontend/*.swp
+frontend/*.swo
+
+# Sistema
+frontend/.DS_Store
+frontend/Thumbs.db
+
+# Logs
+frontend/*.log
+
+# Banco de Dados (não commitar credenciais)
+frontend/*.sql
+frontend/database/dump.sql
+frontend/EOF
