@@ -9,7 +9,7 @@ import os
 from dotenv import load_dotenv
 
 # Carregar variáveis de ambiente do arquivo banckend.env
-load_dotenv('banckend.env')
+load_dotenv('backend.env')
 
 app = FastAPI(title="Banco DuBom")
 
